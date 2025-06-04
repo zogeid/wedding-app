@@ -6,7 +6,7 @@ function updateCountdown() {
   const diff = weddingDate - now;
 
   if (diff <= 0) {
-    countdown.innerHTML = "¡Ya es el gran día!";
+    countdown.innerHTML = lang === "es" ? "¡Ya es el gran día!" : "Today is the big day!";
     return;
   }
 
@@ -14,8 +14,26 @@ function updateCountdown() {
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
 
-  countdown.innerHTML = `Faltan ${days} días, ${hours} h y ${minutes} min`;
+  countdown.innerHTML =
+    lang === "es"
+      ? `Faltan ${days} días, ${hours} h y ${minutes} min`
+      : `${days} days, ${hours} h and ${minutes} min to go`;
 }
+
+let lang = "es"; // idioma por defecto
+const switcher = document.getElementById("lang-switch");
+
+switcher.addEventListener("click", () => {
+  lang = lang === "es" ? "en" : "es";
+  document.documentElement.lang = lang;
+  switcher.textContent = lang === "es" ? "English" : "Español";
+
+  document.querySelectorAll("[data-es]").forEach(el => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
+
+  updateCountdown();
+});
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
