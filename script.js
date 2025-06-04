@@ -1,6 +1,6 @@
 
 const countdown = document.getElementById("countdown");
-const weddingDate = new Date("2025-08-15T17:00:00");
+const weddingDate = new Date("2026-08-15T17:00:00");
 let lang = "es"; // idioma por defecto
 
 function updateCountdown() {
