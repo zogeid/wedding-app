@@ -1,5 +1,7 @@
+
 const countdown = document.getElementById("countdown");
 const weddingDate = new Date("2025-08-15T17:00:00");
+let lang = "es"; // idioma por defecto
 
 function updateCountdown() {
   const now = new Date();
@@ -20,7 +22,6 @@ function updateCountdown() {
       : `${days} days, ${hours} h and ${minutes} min to go`;
 }
 
-let lang = "es"; // idioma por defecto
 const switcher = document.getElementById("lang-switch");
 
 switcher.addEventListener("click", () => {

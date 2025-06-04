@@ -1,15 +1,18 @@
+
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #fff8f0;
-  color: #333;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
 }
 
 .hero {
-  background: #d9cfc1;
-  color: #2c2c2c;
+  background-color: #f0f4f8;
+  color: #111;
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
+  position: relative;
 }
 
 .section {
@@ -22,31 +25,32 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
-input, textarea {
-  padding: 0.8rem;
+input, textarea, button {
+  padding: 0.75rem;
+  font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 button {
-  background: #6a5acd;
-  color: white;
-  padding: 1rem;
+  background-color: #a6c9e2;
+  color: #000;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background: #5a4cbf;
+  background-color: #8bb7d9;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background-color: #eee;
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 #lang-switch {
@@ -54,7 +58,7 @@ footer {
   top: 1rem;
   right: 1rem;
   padding: 0.5rem 1rem;
-  background: #eee;
+  background: #e0e0e0;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -71,4 +75,3 @@ footer {
     font-size: 1rem;
   }
 }
-
