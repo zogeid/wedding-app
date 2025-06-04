@@ -48,3 +48,27 @@ footer {
   padding: 1rem;
   background-color: #eee;
 }
+
+#lang-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .section {
+    padding: 1.5rem 1rem;
+  }
+  input, textarea, button {
+    font-size: 1rem;
+  }
+}
+
