@@ -10,6 +10,7 @@ html, body {
   background-repeat: no-repeat;
   color: #222;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* Fondo blanco semitransparente para legibilidad */
@@ -36,11 +37,19 @@ footer {
   top: 1rem;
   right: 1rem;
   padding: 0.5rem 1rem;
-  background: #e6f0fa;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  background: #fff;
+  color: #333;
+  border: 2px solid #b0d4ee;
+  transition: all 0.3s ease;
+}
+
+#lang-switch:hover {
+  background: #b0d4ee;
+  color: #fff;
 }
 
 /* Formulario */
@@ -86,4 +95,19 @@ footer {
   input, textarea, button {
     font-size: 1rem;
   }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+[data-es], [data-en] {
+  transition: opacity 0.3s ease;
 }

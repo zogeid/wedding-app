@@ -1,6 +1,6 @@
 
 const countdown = document.getElementById("countdown");
-const weddingDate = new Date("2025-08-15T17:00:00");
+const weddingDate = new Date("2025-08-16T17:00:00");
 let lang = "es"; // idioma por defecto
 
 function updateCountdown() {
@@ -29,10 +29,17 @@ const switcher = document.getElementById("lang-switch");
 switcher.addEventListener("click", () => {
   lang = lang === "es" ? "en" : "es";
   document.documentElement.lang = lang;
-  switcher.textContent = lang === "es" ? "English" : "Español";
+  switcher.textContent = lang === "es" ? "Switch to English" : "Cambiar a Español";
 
   document.querySelectorAll("[data-es]").forEach(el => {
-    el.textContent = el.getAttribute(`data-${lang}`);
+    // transición: baja opacidad
+    el.style.opacity = 0;
+    
+    // espera un poco para cambiar el texto, luego sube opacidad
+    setTimeout(() => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+      el.style.opacity = 1;
+    }, 150);
   });
 
   updateCountdown();
