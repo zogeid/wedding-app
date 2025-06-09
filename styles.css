@@ -1,26 +1,49 @@
-/* Contenido del archivo styles.css */
-body {
-  font-family: 'Segoe UI', sans-serif;
+html, body {
+  font-family: 'Quicksand', sans-serif;
   margin: 0;
-  background-color: #ffffff;
+  padding: 0;
+  min-height: 100%;
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #222;
   line-height: 1.6;
 }
 
-.hero {
-  background-color: #f0f4f8;
-  color: #111;
-  text-align: center;
+/* Fondo blanco semitransparente para legibilidad */
+.section,
+.hero,
+footer {
+  background-color: #ffffffcc; /* blanco con muy ligera transparencia */
+  backdrop-filter: blur(4px); /* opcional para elegancia */
   padding: 2rem 1rem;
-  position: relative;
-}
-
-.section {
-  padding: 2rem 1rem;
+  margin: 1rem auto;
   max-width: 800px;
-  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+/* Cabecera especial */
+.hero {
+  text-align: center;
+}
+
+/* Botón de cambio de idioma */
+#lang-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #e6f0fa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Formulario */
 form {
   display: flex;
   flex-direction: column;
@@ -31,39 +54,28 @@ form {
 input, textarea, button {
   padding: 0.75rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #cdd9e3;
   border-radius: 4px;
 }
 
 button {
-  background-color: #a6c9e2;
+  background-color: #b0d4ee;
   color: #000;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #8bb7d9;
+  background-color: #9bc6e9;
 }
 
+/* Pie de página */
 footer {
   text-align: center;
-  padding: 2rem 1rem;
-  background-color: #f8f9fa;
   color: #333;
 }
 
-#lang-switch {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  background: #e0e0e0;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
+/* Responsive */
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 2rem;

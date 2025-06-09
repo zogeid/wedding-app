@@ -1,6 +1,6 @@
 
 const countdown = document.getElementById("countdown");
-const weddingDate = new Date("2026-08-15T17:00:00");
+const weddingDate = new Date("2025-08-15T17:00:00");
 let lang = "es"; // idioma por defecto
 
 function updateCountdown() {
@@ -15,11 +15,13 @@ function updateCountdown() {
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
 
   countdown.innerHTML =
     lang === "es"
-      ? `Faltan ${days} días, ${hours} h y ${minutes} min`
-      : `${days} days, ${hours} h and ${minutes} min to go`;
+      ? `Faltan ${days} días, ${hours} h y ${minutes} min ${seconds} secs`
+      : `${days} days, ${hours} h and ${minutes} min ${seconds} secs to go`;
 }
 
 const switcher = document.getElementById("lang-switch");
