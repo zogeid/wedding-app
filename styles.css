@@ -43,12 +43,12 @@ footer {
   font-weight: 600;
   background: #fff;
   color: #333;
-  border: 2px solid #b0d4ee;
+  border: 2px solid #b0eeb5;
   transition: all 0.3s ease;
 }
 
 #lang-switch:hover {
-  background: #b0d4ee;
+  background: #b0eec2;
   color: #fff;
 }
 
@@ -63,19 +63,19 @@ form {
 input, textarea, button {
   padding: 0.75rem;
   font-size: 1rem;
-  border: 1px solid #cdd9e3;
+  border: 1px solid #cde3ce;
   border-radius: 4px;
 }
 
 button {
-  background-color: #b0d4ee;
+  background-color: #b0eeb5;
   color: #000;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #9bc6e9;
+  background-color: #a4e99b;
 }
 
 /* Pie de página */
@@ -99,13 +99,39 @@ footer {
 
 .hero h1 {
   font-size: 3rem;
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
+  color: #2f502c;
+  margin:0;
 }
 
 .hero p {
   font-size: 1.25rem;
   color: #555;
+  margin: 0.5rem 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 200px;
+  margin-left: -100px; /* Shift slightly left */
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin: 1rem auto;
+  display: block;
 }
 
 [data-es], [data-en] {
